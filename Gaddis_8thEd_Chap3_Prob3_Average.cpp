@@ -7,6 +7,7 @@
 
 //System Libraries
 #include <iostream>  //Input/Output Library
+#include <iomanip>
 using namespace std;
 
 //User Libraries
@@ -21,18 +22,18 @@ int main(int argc, char** argv) {
     //Set the random number seed
     
     //Declare Variables
-    int test1, test2, test3,test4, test5, tstTot;
+    int num1,num2,num3,num4,num5,total;
     float avrage;
     //Initialize or input i.e. set variable values
     
     //Map inputs -> outputs
-    cout << "Please enter the 5 test scores for the class." << endl;
-    cin >> test1 >> test2 >> test3 >> test4 >> test5;
+    cout << "Input 5 numbers to average." << endl;
+    cin >> num1>> num2>>num3>>num4>>num5;
 
-    tstTot = test1+test2+test3+test4+test5;
-    avrage = tstTot /5;
+    total = num1+num2+num3+num4+num5;
+    avrage = static_cast<float> (total) /5;
     //Display the outputs
-    cout << " The average test grade for the class is " << avrage << endl;
+    cout << " The average = " << fixed << setprecision(1)<< avrage;
 
     //Exit stage right or left!
     return 0;
