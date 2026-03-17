@@ -1,13 +1,15 @@
 /* 
  * File:   main.cpp
  * Author: Christopher Nakahara
- * Created on January 2, 2019, 12:36 PM
+ * Created on March 16, 5:20pm
  * Purpose:  Creation of Template to be used for all
  *           future projects
  */
 
 //System Libraries
 #include <iostream>  //Input/Output Library
+#include <iomanip>
+#include <cmath>
 using namespace std;
 
 //User Libraries
@@ -22,15 +24,15 @@ int main(int argc, char** argv) {
     //Set the random number seed
     
     //Declare Variables
-    float insAmt, homeCst;
+    float degFer, degCel;
     //Initialize or input i.e. set variable values
-    cout << "Insurance Calculator" << endl;
+    cout << "Temperature Converter" << endl;
     //Map inputs -> outputs
-    cout << "How much is your house worth?" << endl;
-    cin >> homeCst;
-    insAmt = homeCst * .8;
+    cout << "Input Degrees Fahrenheit" << endl;
+    cin >> degFer;
+    degCel = (degFer-32) * (5/9);
     //Display the outputs
-    cout << "You need $" << insAmt << " of insurance.";
+    cout << fixed << setprecision(1)<< degFer << " Degrees Fahrenheit = " << fixed << setprecision(1)<<degCel << "Degrees Centigrade";
     //Exit stage right or left!
     return 0;
 }
