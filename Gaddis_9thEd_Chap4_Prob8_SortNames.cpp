@@ -8,6 +8,7 @@
 
 //System Libraries
 #include <iostream>  //Input/Output Library
+#include<iomanip>
 using namespace std;
 
 //User Libraries
@@ -29,7 +30,10 @@ int main(int argc, char** argv) {
     cout << "Sorting Names" << endl << "Input 3 names" << endl;
     cin >> name1 >> name2 >> name3;
     //Display the outputs
-
+    if (name1 > name2 && name1 > name3 && name2 > name3)
+    {
+        cout << name1 << name2 << name3;
+    }
     //Exit stage right or left!
     return 0;
 }
