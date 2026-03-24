@@ -30,9 +30,29 @@ int main(int argc, char** argv) {
     cout << "Sorting Names" << endl << "Input 3 names" << endl;
     cin >> name1 >> name2 >> name3;
     //Display the outputs
-    if (name1 > name2 && name1 > name3 && name2 > name3)
+    if (name1 < name2 && name1 < name3 && name2 < name3)
     {
-        cout << name1 << name2 << name3;
+        cout << name1 << endl << name2 << endl << name3;
+    }
+     if (name1 < name2 && name1 < name3 && name3 < name2)
+    {
+        cout << name1 << endl << name3 << endl << name2;
+    }
+     if (name2 < name1 && name2 < name3 && name1 < name3)
+    {
+        cout << name2 << endl << name1 << endl << name3;
+    }
+    if (name2 < name1 && name2 < name3 && name3 < name1)
+    {
+        cout << name2 << endl << name3 << endl << name1;
+    }
+    if (name3 < name1 && name3 < name2 && name1 < name2)
+    {
+        cout << name3 << endl << name1 << endl << name2;
+    }
+    if (name3 < name1 && name3 < name2 && name2 < name1)
+    {
+        cout << name3 << endl << name2 << endl << name1;
     }
     //Exit stage right or left!
     return 0;
