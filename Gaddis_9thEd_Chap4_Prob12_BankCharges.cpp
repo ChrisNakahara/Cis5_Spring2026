@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
     //Map inputs -> outputs
     cin >> bal >> numChk;
     //Display the outputs
-    cout << "Balance     $   " << fixed << setprecision(2) << bal << endl;
+    cout << "Balance     $" << fixed << setprecision(2) << setw(9) << bal << endl;
     if (numChk < 1)
     {
         chkFee = 0;
@@ -49,9 +49,9 @@ int main(int argc, char** argv) {
     {
         chkFee = numChk * .04;
     }
-    cout << "Check Fee   $     " << chkFee << endl;
+    cout << "Check Fee   $" << setw(9) << chkFee << endl;
     nwBal = bal - chkFee;
-    cout << "Monthly Fee $    " << monFee << endl;
+    cout << "Monthly Fee $" << setw(9) << monFee << endl;
     nwBal -= monFee;
     if(bal < 400)
     {
@@ -61,9 +61,9 @@ int main(int argc, char** argv) {
     {
         lowBal = 0;
     }
-    cout << "Low Balance $    " << lowBal << endl;
+    cout << "Low Balance $" <<  setw(9) << lowBal << endl;
     nwBal -= lowBal;
-    cout << "New Balance $    " << nwBal;
+    cout << "New Balance $" << setw(9) << nwBal;
     //Exit stage right or left!
     return 0;
 }
